@@ -1,0 +1,53 @@
+.message {
+    min-height: 130px;
+    border-radius: 5px;
+    padding: 0;
+    background-color: #1f1e2c;
+
+    &.success {
+        border: 0.5px solid #1f1e2c;
+        border-right: 10px solid #1f1e2c;
+    }
+    &.warning {
+        border: 0.5px solid #1f1e2c;
+        border-right: 10px solid #1f1e2c;
+    }
+    &.info {
+        border: 0.5px solid #1f1e2c;
+        border-right: 10px solid #1f1e2c;    
+    }
+    &.error {
+        border: 0.5px solid #1f1e2c;
+        border-right: 10px solid #1f1e2c;    
+    }
+
+    .message-box {
+        text-align: center;
+        font-size: 0.9rem;
+        padding-top: 20px;
+
+        &.success {
+            color: #1f1e2c;
+        }
+        &.warning {
+            color: #1f1e2c;
+        }
+        &.info {
+            color: #1f1e2c;
+        }
+        &.error {
+            color: #1f1e2c;
+        }
+    }
+    .icon-box {
+        .success, .error, .warning, .info {
+            text-align: center;
+            padding: 5px 10px 20px 10px;
+
+            img {
+                width: 50px;
+                margin-top: 20px;
+            }
+        }
+    }
+}

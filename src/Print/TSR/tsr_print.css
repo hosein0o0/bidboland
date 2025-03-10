@@ -1,0 +1,488 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+/* @font-face {
+    font-family: "iransanse";
+    src: url(./font/iranyekanwebregularfanum.ttf);
+}
+@page {
+    size: A4 portrait;
+    margin: 0;
+} */
+/* .mainPDF {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: "iransanse";
+    background-color: #fff;
+}
+.mainPDF * {
+    font-family: "iransanse";
+    direction: rtl;
+}
+.d-flex {
+    display: flex;
+}
+body {
+    box-sizing: border-box;
+    font-family: "iransanse";
+    background-color: #fff;
+    direction: rtl;
+}
+
+.land {
+    margin: auto;
+    display: block;
+    width: 296mm;
+    height: 205mm;
+    padding: 3mm;
+    background-color: white;
+}
+
+.portrate {
+    margin: auto;
+    display: block;
+    width: 205mm;
+    height: 295mm;
+    padding: 6mm;
+    background-color: white;
+}
+
+.holder {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    display: flex;
+}
+
+.holder_left {
+    width: 97%;
+    border: 1px solid #000;
+}
+
+.holder_right {
+    width: 3%;
+    border: 1px solid #000;
+    border-bottom: none;
+}
+.conti {
+    margin-top: 1mm;
+}
+.conti_span {
+    margin-bottom: 1mm;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 2mm;
+}
+.mainPDF .end td {
+    border-bottom: none;
+    border-top: none;
+}
+.mainPDF .end {
+    border-bottom: 1px solid #000;
+}
+.mainPDF th,
+.mainPDF td {
+    border: 1px solid black;
+    padding: 0 5px 0 0;
+}
+
+.mainPDF table,
+.mainPDF thead,
+.mainPDF td {
+    font-weight: 100;
+    font-size: 9.8px;
+    padding: 0.4mm;
+}
+
+.mainPDF table {
+    border-collapse: collapse;
+    background-color: white;
+    width: 100%;
+}
+
+.mainPDF table thead img {
+    width: 90%;
+}
+
+.mainPDF .portrate table thead img {
+    width: 25mm;
+}
+
+.mainPDF .portrate table thead img[alt~="EIED"] {
+    width: 17mm;
+}
+
+.mainPDF .land table thead img {
+    width: 30mm;
+}
+
+.mainPDF .land table thead img[alt~="EIED"] {
+    width: 17mm;
+}
+
+.mainPDF .land table.body {
+    margin-top: 3mm;
+}
+
+.mainPDF .footerbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainPDF .footerbox:first-child {
+    margin-right: 4mm;
+}
+
+.mainPDF ._tikbox {
+    width: 4mm;
+    height: 4mm;
+    background: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5mm;
+}
+.mainPDF ._tikbox svg {
+    width: 100%;
+    height: 100%;
+    fill: #242424;
+}
+.mainPDF .roteated {
+    width: 6mm;
+    height: 100%;
+    line-height: 5mm;
+    position: relative;
+}
+
+.mainPDF .roteated span {
+    transform: rotate(-90deg);
+    display: block;
+    width: 83mm;
+    direction: rtl;
+    line-height: 8mm;
+    position: absolute;
+    top: 158mm;
+    left: -41mm;
+}
+.mainPDF .roteated span.a {
+    left: -39mm;
+}
+.mainPDF .tikbox.active {
+    background: #388809;
+}
+
+.mainPDF .margin6 {
+    margin: 6mm;
+}
+
+.mainPDF .p1 {
+    padding: 1mm;
+}
+
+.mainPDF .flwr {
+    display: flex;
+    flex-wrap: wrap;
+}
+.mainPDF .f8 {
+    font-size: 8px;
+}
+.mainPDF .f12 {
+    font-size: 12px;
+}
+
+.mainPDF .f16 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mainPDF .tealc {
+    text-align: center;
+    padding: 0;
+}
+
+.mainPDF .p0 {
+    padding: 0;
+}
+
+.mainPDF .p1 {
+    padding: 1mm;
+}
+
+.mainPDF .space {
+    border-left: white 2px solid;
+    border-right: white 2px solid;
+}
+
+.mainPDF .no_BR {
+    border-right: none;
+}
+
+.mainPDF .no_BL {
+    border-left: none;
+}
+
+.mainPDF .no_BTB {
+    border-top: none;
+    border-bottom: none;
+}
+
+.mainPDF .no_BB {
+    border-bottom: none;
+}
+
+.mainPDF .no_BT {
+    border-top: none;
+}
+
+.mainPDF .backd {
+    background-color: rgb(199 199 199);
+}
+
+.mainPDF .dl {
+    direction: ltr;
+}
+
+.mainPDF .dr {
+    direction: rtl;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.mainPDF .wss {
+    width: 8mm;
+}
+
+.ws {
+    width: 13mm;
+}
+
+.wm {
+    width: 20mm;
+}
+
+.wmm {
+    width: 23mm;
+}
+
+.wls {
+    width: 29.5mm;
+}
+
+.wlss {
+    width: 40mm;
+}
+
+.wl {
+    width: 50mm;
+}
+
+.wlm {
+    width: 70mm;
+}
+
+.wll {
+    width: 80mm;
+}
+
+.wlll {
+    width: 100mm;
+}
+
+.wlx {
+    width: 170mm;
+}
+
+.hsss {
+    height: 6mm;
+}
+
+.hss {
+    height: 9mm;
+}
+
+.hs {
+    height: 18mm;
+}
+
+.hm {
+    height: 18mm !important;
+}
+
+.hl {
+    height: 23mm;
+}
+.hal {
+    height: 20mm !important;
+}
+
+.hll {
+    height: 40mm !important;
+}
+
+.hlll {
+    height: 80mm;
+}
+
+.hlx {
+    height: 200mm;
+}
+
+.hlxx {
+    height: 220mm;
+}
+
+.fss {
+    font-size: 10px;
+}
+
+.fs {
+    font-size: 12px;
+}
+
+.fm {
+    font-size: 14px;
+}
+
+.fl {
+    font-size: 18px;
+}
+
+.fll {
+    font-size: 20;
+}
+
+.flll {
+    font-size: 22;
+}
+
+.b {
+    font-weight: 700;
+}
+
+.nob {
+    font-weight: 300;
+}
+
+.starttop {
+    padding-top: 1px;
+    vertical-align: top;
+}
+.border {
+    border: 2px solid #000;
+}
+
+.conti {
+    margin-top: 0.4mm !important;
+}
+.conti_span {
+    margin-bottom: 1mm;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 2mm;
+}
+.padR {
+    padding-right: 20mm;
+    margin-bottom: 2mm;
+}
+.padRk {
+    padding-right: 7mm;
+    margin-bottom: 4mm;
+}
+.halk {
+    height: 40mm;
+}
+.halxx {
+    height: 60mm;
+}
+.roteated5 {
+    width: 6mm;
+    height: 100%;
+    line-height: 5mm;
+    position: relative;
+}
+
+.roteated5 span {
+    transform: rotate(-90deg);
+    display: block;
+    width: 105mm;
+    direction: rtl;
+    line-height: 8mm;
+    position: absolute;
+    top: 132mm;
+    left: -56mm;
+}
+._sign td img {
+    height: 3cm;
+    object-fit: contain;
+}
+.d-inline-block {
+    display: inline-block;
+}
+.w-50 {
+    width: 50%;
+}
+.mainPDF .bt {
+    border-top: 1px solid !important;
+}
+.mainPDF .link-document {
+    margin: 0.1mm 0.3mm;
+    max-width: 100%;
+    display: inline-block;
+}
+.mr-1 {
+    margin-right: 0.1em;
+}
+.ml-1 {
+    margin-left: 0.1em;
+}
+.mr-2 {
+    margin-right: 0.3em;
+}
+.mainPDF span.value {
+    font-weight: bold;
+}
+.mainPDF p.value {
+    padding-top: 2mm;
+    padding-right: 2mm;
+}
+.sign-text {
+    font-size: 10px;
+    text-align: right;
+}
+.tableTikBox {
+    padding: 0;
+    white-space: nowrap;
+}
+.crisp-client {
+    display: none;
+}
+.mainPDF .sign span.end.d-flex {
+    text-align: center;
+    justify-content: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.__sign {
+    position: absolute;
+    bottom: 0;
+    left: 8mm;
+    right: 6mm;
+    border-top: 1px solid;
+}
+.___mainSign {
+    padding: 3mm 6mm 2mm 8mm;
+    height: calc(100% - 92mm);
+    position: relative;
+    padding-bottom: 40mm;
+} */

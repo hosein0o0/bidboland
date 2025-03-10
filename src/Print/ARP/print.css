@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "iransanse";
+    src: url(./font/iranyekanwebregularfanum.ttf);
+}
+/* if portrait */
+/* @page {
+    size: A4 portrait;
+} */
+/* if lanscape */
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+.mainPDF {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: "iransanse";
+    background-color: #fff;
+}
+.mainPDF * {
+    font-family: "iransanse";
+    direction: rtl;
+}
+.d-flex {
+    display: flex;
+}
+.px-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.text-center {
+    text-align: center;
+}
+.d-block {
+    display: block;
+}
+.sign-text {
+    font-size: 10px;
+    text-align: right;
+}
+.land {
+    margin: auto;
+    display: block;
+    width: 296mm;
+    height: 205mm;
+    padding: 3mm;
+    background-color: white;
+}
+
+.mainPDF .portrate {
+    /* margin: auto; */
+    /* display: block; */
+    /* width: 205mm; */
+    /* height: 294mm; */
+    /* padding: 6mm; */
+    /* background-color: white; */
+}
+
+.mainPDF .holder {
+    /* width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    display: flex; */
+}
+
+.mainPDF .holder_left {
+    /* width: 97%;
+    border: 1px solid #000; */
+}
+
+.mainPDF .holder_right {
+    /* width: 3%;
+    border: 1px solid #000;
+    border-bottom: none; */
+}
+.mainPDF .conti {
+    margin-top: 1mm;
+}
+.mainPDF .conti_span {
+    margin-bottom: 1mm;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 2mm;
+}
+/* .end td{
+    border-bottom: none;
+    border-top: none;
+} */
+.mainPDF .end {
+    border-bottom: 1px solid #000;
+}
+.mainPDF th,
+.mainPDF td {
+    border: 1px solid black;
+    padding: 0 5px 0 0;
+}
+
+.mainPDF table,
+.mainPDF thead,
+.mainPDF td {
+    font-weight: 100;
+    font-size: 11px;
+}
+.mainPDF span.value {
+    font-weight: bold;
+}
+.mainPDF p.value {
+    padding-top: 2mm;
+    padding-right: 2mm;
+}
+.mainPDF table {
+    border-collapse: collapse;
+    background-color: white;
+    width: 100%;
+}
+
+.mainPDF table thead img {
+    width: 90%;
+}
+
+.mainPDF .portrate table thead img {
+    width: 25mm;
+}
+
+.mainPDF .portrate table thead img[alt~="EIED"] {
+    width: 17mm;
+}
+
+.mainPDF .land table thead img {
+    width: 30mm;
+}
+
+.mainPDF .land table thead img[alt~="EIED"] {
+    width: 17mm;
+}
+
+.mainPDF .land table.body {
+    margin-top: 3mm;
+    /* border: 3px solid black;
+    border-top: 1px solid black; */
+}
+
+.mainPDF .footerbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainPDF .footerbox:first-child {
+    margin-right: 4mm;
+}
+
+.mainPDF .tikbox {
+    width: 2.5mm;
+    height: 2.5mm;
+    background: #eee;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #000;
+}
+.mainPDF .tikbox._checked {
+    background: #000;
+}
+
+.mainPDF .roteated {
+    width: 6mm;
+    height: 100%;
+    line-height: 5mm;
+    position: relative;
+}
+
+.mainPDF .roteated span {
+    transform: rotate(-90deg);
+    display: block;
+    width: 83mm;
+    direction: rtl;
+    line-height: 8mm;
+    position: absolute;
+    top: 158mm;
+    left: -39mm;
+}
+
+.mainPDF .tikbox.active {
+    background: #388809;
+}
+
+.mainPDF .margin6 {
+    margin: 6mm;
+}
+
+.mainPDF .p1 {
+    padding: 1mm;
+}
+
+.mainPDF .flwr {
+    display: flex;
+    flex-wrap: wrap;
+}
+.mainPDF .f8 {
+    font-size: 8px;
+}
+.mainPDF .f12 {
+    font-size: 12px;
+}
+
+.mainPDF .f16 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mainPDF .tealc {
+    text-align: center;
+    padding: 0;
+}
+
+.mainPDF .p0 {
+    padding: 0;
+}
+
+.mainPDF .p1 {
+    padding: 1mm;
+}
+
+.mainPDF .space {
+    border-left: white 2px solid;
+    border-right: white 2px solid;
+}
+
+.mainPDF .no_BR {
+    border-right: none;
+}
+
+.mainPDF .no_BL {
+    border-left: none;
+}
+
+.mainPDF .no_BTB {
+    border-top: none;
+    border-bottom: none;
+}
+
+.mainPDF .no_BB {
+    border-bottom: none;
+}
+
+.mainPDF .no_BT {
+    border-top: none;
+}
+
+.mainPDF .backd {
+    background-color: rgb(199 199 199);
+}
+
+.mainPDF .dl {
+    direction: ltr;
+}
+
+.mainPDF .dr {
+    direction: rtl;
+}
+
+.mainPDF .w100 {
+    width: 100%;
+}
+
+.mainPDF .wss {
+    width: 8mm;
+}
+
+.mainPDF .ws {
+    width: 13mm;
+}
+
+.mainPDF .wm {
+    width: 20mm;
+}
+
+.mainPDF .wmm {
+    width: 23mm;
+}
+
+.mainPDF .wls {
+    width: 29.5mm;
+}
+
+.mainPDF .wlss {
+    width: 40mm;
+}
+
+.mainPDF .wl {
+    width: 50mm;
+}
+
+.mainPDF .wlm {
+    width: 70mm;
+}
+
+.mainPDF .wll {
+    width: 80mm;
+}
+
+.mainPDF .wlll {
+    width: 100mm;
+}
+
+.mainPDF .wlx {
+    width: 170mm;
+}
+
+.mainPDF .hsss {
+    height: 6mm;
+}
+
+.mainPDF .hss {
+    height: 9mm;
+}
+
+.mainPDF .hs {
+    height: 18mm;
+}
+
+.mainPDF .hm {
+    height: 20mm;
+}
+
+.mainPDF .hl {
+    height: 23mm;
+}
+.mainPDF .hal {
+    height: 25mm;
+}
+
+.mainPDF .hll {
+    height: 70mm;
+}
+
+.mainPDF .hlll {
+    height: 80mm;
+}
+
+.mainPDF .hlx {
+    height: 200mm;
+}
+
+.mainPDF .hlxx {
+    height: 220mm;
+}
+
+.mainPDF .fss {
+    font-size: 10px;
+}
+
+.mainPDF .fs {
+    font-size: 12px;
+}
+
+.mainPDF .fm {
+    font-size: 14px;
+}
+
+.mainPDF .fl {
+    font-size: 18px;
+}
+
+.mainPDF .fll {
+    font-size: 20;
+}
+
+.mainPDF .flll {
+    font-size: 22;
+}
+
+.mainPDF .b {
+    font-weight: 700;
+}
+
+.mainPDF .nob {
+    font-weight: 300;
+}
+
+.mainPDF .starttop {
+    padding-top: 1px;
+    vertical-align: top;
+}
+.mainPDF .sign {
+    padding: 0;
+}
+.px-1 {
+    padding-left: 1mm;
+    padding-right: 1mm;
+}
+._link {
+    display: inline-flex;
+    max-width: 25mm;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 0.5mm;
+    margin-right: 0.5mm;
+}
+._title {
+    background-color: #d0cece;
+}
+.float-left {
+    float: left;
+    clear: both;
+}
+.mx-1 {
+    margin-right: 1mm;
+    margin-left: 1mm;
+}
+.mainPDF .portrate table thead img._logo {
+    width: 30mm;
+}
+.mainPDF .__MainData {
+    margin-top: 0px;
+    height: calc(100% - 90mm);
+    border: 1px solid;
+}
+.mainPDF .__MainData table {
+    border: none;
+}
+.mainPDF .__MainData table tr td,
+.mainPDF .__MainData table tr th {
+    border-left: none !important;
+    border-right: none !important;
+}
+._hll {
+    height: 66mm;
+}

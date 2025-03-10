@@ -1,0 +1,49 @@
+.message {
+  min-height: 130px;
+  border-radius: 5px;
+  padding: 0;
+  background-color: #1f1e2c;
+}
+.message.success {
+  border: 0.5px solid #1f1e2c;
+  border-right: 10px solid #1f1e2c;
+}
+.message.warning {
+  border: 0.5px solid #1f1e2c;
+  border-right: 10px solid #1f1e2c;
+}
+.message.info {
+  border: 0.5px solid #1f1e2c;
+  border-right: 10px solid #1f1e2c;
+}
+.message.error {
+  border: 0.5px solid #1f1e2c;
+  border-right: 10px solid #1f1e2c;
+}
+.message .message-box {
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 20px;
+}
+.message .message-box.success {
+  color: #1f1e2c;
+}
+.message .message-box.warning {
+  color: #1f1e2c;
+}
+.message .message-box.info {
+  color: #1f1e2c;
+}
+.message .message-box.error {
+  color: #1f1e2c;
+}
+.message .icon-box .success, .message .icon-box .error, .message .icon-box .warning, .message .icon-box .info {
+  text-align: center;
+  padding: 5px 10px 20px 10px;
+}
+.message .icon-box .success img, .message .icon-box .error img, .message .icon-box .warning img, .message .icon-box .info img {
+  width: 50px;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=Message.css.map */
