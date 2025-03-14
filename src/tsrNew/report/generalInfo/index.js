@@ -11,19 +11,20 @@ export function GeneralInfo({ data }) {
         data
       return [
         { value: all_checkable, label: 'قابل بررسی-وروری', color: '#33c9fe' },
-        { value: all_reject, label: 'رد شده', color: '#f03a34' },
+        { value: all_reject, label: 'رد شده', color: '#f03a34', showChart: true },
         {
           value: all_checking,
           label: 'در دست بررسی-درحال انجام',
-          color: '#ffd600'
+          color: '#ffd600',
+          showChart: true
         },
-        { value: all_finish, label: 'به اتمام رسید', color: '#0ee67b' }
+        { value: all_finish, label: 'به اتمام رسید', color: '#0ee67b', showChart: true }
       ]
     }
     return []
   }, [data])
   const dataFiltered = useMemo(() => {
-    return datanfo.filter(d => d.label !== 'قابل بررسی-وروری')
+    return datanfo.filter(d => d.showChart)
   }, [datanfo])
   return (
     <div className='w-100 d-flex'>

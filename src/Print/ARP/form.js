@@ -14,7 +14,7 @@ import logo from './img/bigi.jpg'
 import moment from 'moment-jalaali'
 import handleCheckText from '../../handleCheckText'
 export default class PrintARP extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       token: Cookies.get('token'),
@@ -98,7 +98,7 @@ export default class PrintARP extends Component {
       level: 0
     }
   }
-  componentDidMount () {
+  componentDidMount() {
     this.fetchData()
   }
   CheckPyvast = data => {
@@ -173,34 +173,31 @@ export default class PrintARP extends Component {
     }
     return check
   }
-  render () {
+  render() {
     const { level, event_description, event_before_instructions } = this.state
     return (
       <div className='mainPDF'>
         <NotificationContainer />
-        {level > 0 ? <Form_1 {...this} logo={logo} checkAuthor={true} /> : ''}
-        {level > 1 ? <Form_2 {...this} logo={logo} /> : ''}
-        {level > 2 ? (
-          <Form_3
-            {...this}
-            logo={logo}
-            checkAuthor={
-              handleCheckText(event_description) ||
-              handleCheckText(event_before_instructions)
-            }
-          />
-        ) : (
-          ''
-        )}
-        {level > 3 ? (
-          <Form_4
-            {...this}
-            logo={logo}
-            checkAuthor={this.handleCheckCorrective()}
-          />
-        ) : (
-          ''
-        )}
+
+          {level > 0 && <Form_1 {...this} logo={logo} checkAuthor={true} />}
+          {level > 1 && <Form_2 {...this} logo={logo} />}
+          {level > 2 && (
+            <Form_3
+              {...this}
+              logo={logo}
+              checkAuthor={
+                handleCheckText(event_description) ||
+                handleCheckText(event_before_instructions)
+              }
+            />
+          )}
+          {level > 3 && (
+            <Form_4
+              {...this}
+              logo={logo}
+              checkAuthor={this.handleCheckCorrective()}
+            />
+          )}
       </div>
     )
   }

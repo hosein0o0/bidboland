@@ -7,8 +7,9 @@ import { BarChart } from '../../../Component/chart/barChart'
 import { PieChart } from '../../../Component/chart/pieChart'
 import { DownloadBtn } from './download'
 
-export function LastStatusImprove ({ list }) {
+export function LastStatusImprove({ list, officeList }) {
   const [index, setIndex] = useState()
+  const [indexOffice, setIndexOffice] = useState()
 
   const [data, setData] = useState()
   const [state, setState] = useState('barChart')
@@ -20,7 +21,7 @@ export function LastStatusImprove ({ list }) {
   const fetchData = async () => {
     if (index) {
       const lastStatus = await get(
-        `tsrMg/getByImprove?improvement_type=${index}`
+        `tsrMg/getByImprove?improvement_type=${index}&office=${indexOffice}`
       )
       setData(lastStatus)
     }
@@ -29,8 +30,19 @@ export function LastStatusImprove ({ list }) {
   const titleElm = useMemo(() => {
     return (
       <>
-        آخرین وضعیت TSR در هر بهبود{' '}
-        <Switch setValue={setIndex} list={list} multi />
+        آخرین وضعیت TSR براساس نوع بهبود{' '}
+        <div className='my-2' >
+          <span>بهبود:</span>
+          <div style={{ marginRight: '-16px' }}>
+            <Switch setValue={setIndex} list={list} multi />
+          </div>
+        </div>
+        <div className='my-2'>
+          <span>اداره:</span>
+          <div style={{ marginRight: '-16px' }}>
+            <Switch setValue={setIndexOffice} list={officeList} multi />
+          </div>
+        </div>
       </>
     )
   }, [index, list])
@@ -62,7 +74,7 @@ export function LastStatusImprove ({ list }) {
           }
           state={state}
         >
-          <DownloadBtn />
+          <DownloadBtn improvement_type={index} office={indexOffice}/>
           {state === 'barChart' && <BarChart data={dataLastStatus} />}
           {state === 'pieChart' && <PieChart data={dataLastStatus} />}
         </BoxChart>

@@ -2,7 +2,12 @@ import { Tooltip } from '@material-ui/core'
 import DownloadInNewPage from '../../../download'
 import { useState } from 'react'
 import Loading from '../../../layout/loading'
-export const DownloadBtn = () => {
+import GetAppIcon from '@material-ui/icons/GetApp';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
+
+
+
+export const DownloadBtn = ({ improvement_type, office }) => {
   const style = {
     width: 32,
     height: 32,
@@ -12,14 +17,14 @@ export const DownloadBtn = () => {
   const [loading, setLoading] = useState('')
   const download = async (url, status) => {
     setLoading(status)
-    DownloadInNewPage(url)
+    await DownloadInNewPage(`${url}?improvement_type=${improvement_type}&office=${office}`)
     setLoading()
   }
   const className =
-    'position-absolute m-2 border-0 p-1 rounded outline-none d-flex align-items-center justify-content-center'
+    'position-absolute m-2 border-0 p-1 rounded outline-none d-flex align-items-center justify-content-center pointer'
   return (
     <>
-      <Tooltip title='دانلود اکسل' arrow>
+      <Tooltip title='دانلود اکسل' arrow className='IranSans_Bold_FA'>
         <button
           className={className}
           style={{ ...style, right: 40 }}
@@ -29,12 +34,12 @@ export const DownloadBtn = () => {
           {loading === 'excel' ? (
             <Loading />
           ) : (
-            <img src='/img/XLS.svg' alt='xls' />
+            <GetAppIcon />
           )}
         </button>
       </Tooltip>
 
-      <Tooltip title='دانلود اکسل جزئیات' arrow>
+      <Tooltip title='دانلود اکسل جزئیات' arrow className='IranSans_Bold_FA'>
         <button
           className={className}
           style={{ ...style, right: 80 }}
@@ -45,7 +50,7 @@ export const DownloadBtn = () => {
           {loading === 'excelDetail' ? (
             <Loading />
           ) : (
-            <img src='/img/XLS.svg' alt='xls' />
+            <CloudDownloadIcon />
           )}
         </button>
       </Tooltip>

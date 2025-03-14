@@ -17,7 +17,7 @@ export function LastStatusForm({ list }) {
   }, [index])
 
   const fetchData = async () => {
-    if(index){
+    if (index) {
       const lastStatus = await get(`tsrMg/getByForm?form=${index}`)
       setData(lastStatus)
     }
@@ -26,7 +26,7 @@ export function LastStatusForm({ list }) {
   const titleElm = useMemo(() => {
     return (
       <>
-        آخرین وضعیت TSR در <Switch setValue={setIndex} list={list}/>
+        آخرین وضعیت TSR در <Switch setValue={setIndex} list={list} />
       </>
     )
   }, [index, list])
@@ -43,13 +43,13 @@ export function LastStatusForm({ list }) {
       } = data
       return [
         { value: form_checkable, label: 'قابل بررسی-وروری', color: '#33c9fe' },
-        { value: form_reject, label: 'رد شده', color: '#f03a34' },
+        { value: form_reject, label: 'رد شده', color: '#f03a34', showChart: true },
         {
           value: form_checking,
           label: 'در دست بررسی-درحال انجام',
-          color: '#ffd600'
+          color: '#ffd600', showChart: true
         },
-        { value: form_accept, label: 'تایید شده', color: '#0ee67b' },
+        { value: form_accept, label: 'تایید شده', color: '#0ee67b', showChart: true },
         {
           value: form_performance + '%',
           label: 'درصد عملکرد',
@@ -67,14 +67,14 @@ export function LastStatusForm({ list }) {
   const filteredData = useMemo(
     () =>
       dataLastStatus.filter(
-        d => d.label !== 'درصد باقی‌مانده' && d.label !== 'درصد عملکرد' && d.label !== 'قابل بررسی-وروری'
+        d => d.showChart
       ),
     [dataLastStatus]
   )
   return (
     <div className='w-100 d-flex'>
-      <div style={{width : 408}}>
-      <SituationBox title={titleElm} data={dataLastStatus} />
+      <div style={{ width: 408 }}>
+        <SituationBox title={titleElm} data={dataLastStatus} />
       </div>
       <div className='col'>
         <BoxChart

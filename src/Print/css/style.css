@@ -29,6 +29,14 @@ body {
     font-size: 9px;
     font-family: "iransanse";
     background-color: #fff;
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* padding: 6mm; */
+    gap: 1cm;
 }
 
 .overflow-hidden {
@@ -66,12 +74,14 @@ body {
 
 .portrate {
     margin: auto;
-    display: block;
-    width: 205mm;
-    height: 295mm;
-    padding: 6mm;
+    width: 21cm;
+    height: 28.5cm;
     background-color: white;
     overflow: hidden;
+    border: .06cm solid #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .m-auto {
@@ -81,18 +91,22 @@ body {
 .holder {
     width: 100%;
     height: 100%;
-    border: 2px solid #000;
+    /* width: calc(21cm - 6mm); */
+    /* height: calc(29.7cm - 6mm); */
+    /* border: 2px solid #000; */
     display: flex;
 }
 
 .holder_left {
-    width: 97%;
-    border: 1px solid #000;
+    flex-basis: 0;
+    flex-grow: 1;
+    /* width: 97%; */
+    /* border: 1px solid #000; */
 }
 
 .holder_right {
-    width: 3%;
-    border: 1px solid #000;
+    width: 1cm;
+    border-left: .6mm solid #000;
     border-bottom: none;
 }
 

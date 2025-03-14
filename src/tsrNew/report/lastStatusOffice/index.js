@@ -37,7 +37,9 @@ export function LastStatusOffice({ list }) {
         office_checkable,
         office_reject,
         office_finish,
-        office_checking
+        office_checking,
+        office_performance,
+        office_remainder
       } = data
       return [
         {
@@ -45,20 +47,36 @@ export function LastStatusOffice({ list }) {
           label: 'قابل بررسی-وروری',
           color: '#33c9fe'
         },
-        { value: office_reject, label: 'رد شده', color: '#f03a34' },
-        { value: office_finish, label: 'به اتمام رسید', color: '#ffd600' },
+        { value: office_reject, label: 'رد شده', color: '#f03a34', showChart: true },
+        { value: office_finish, label: 'به اتمام رسید', color: '#ffd600', showChart: true },
         {
           value: office_checking,
           label: 'دردست بررسی-درحال انجام',
-          color: '#0ee67b'
+          color: '#0ee67b',
+          showChart: true
+        },
+        {
+          value: office_performance + '%',
+          label: 'درصد عملکرد',
+          color: '#405d80'
+        },
+        {
+          value: office_remainder + '%',
+          label: 'درصد باقی‌مانده',
+          color: '#5b85d9'
         }
       ]
     }
     return []
   }, [data])
-  const dataFiltered = useMemo(() => {
-    return dataLastStatus.filter(d => d.label !== 'قابل بررسی-وروری')
-  }, [dataLastStatus])
+
+  const dataFiltered = useMemo(
+    () =>
+      dataLastStatus.filter(
+        d => d.showChart
+      ),
+    [dataLastStatus]
+  )
   return (
     <div className='w-100 d-flex'>
       <div style={{ width: 408 }}>

@@ -25,7 +25,7 @@ switch (ProjectName) {
     Title = 'DARA IDMS'
     Name = 'بیدبلند خلیج فارس'
     status = 'سامانه مدیریت اسناد الکترونیک دارا'
-    link_file = `http://185.190.39.82:85`
+    link_file = `http://192.168.178.25`
     break
   case 'Pars':
     FrontIp = 'http://185.105.239.21:8083/185.105.239.21:8080'
@@ -39,8 +39,11 @@ switch (ProjectName) {
     break
 }
 module.exports = {
-  domainIp, FrontIp,
-  Title, Name,
+  domainIp,
+  FrontIp,
+  Title,
+  Name,
   ProjectName,
-  status, link_file
+  status,
+  link_file
 }
