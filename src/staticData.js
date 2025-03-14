@@ -16,16 +16,16 @@ switch (ProjectName) {
     status = 'سامانه یکپارچه تصمیم ساز مدیریت پروژه دارا'
     break
   case 'BIDBOLAND':
-    FrontIp = 'http://192.168.178.25:8080'
+    // FrontIp = 'http://192.168.178.25:8080'
     // FrontIp = 'http://192.168.30.81:8083/http://192.168.178.15'
-    // FrontIp = 'http://185.190.39.82:8050'
+    FrontIp = 'http://185.190.39.82:8050'
     // FrontIp = '/refrence'
     domainIp = FrontIp + ''
     // logoUrl = 'http://185.105.239.21'
     Title = 'DARA IDMS'
     Name = 'بیدبلند خلیج فارس'
     status = 'سامانه مدیریت اسناد الکترونیک دارا'
-    link_file = `http://192.168.178.25`
+    link_file = `http://185.190.39.82:85`
     break
   case 'Pars':
     FrontIp = 'http://185.105.239.21:8083/185.105.239.21:8080'
@@ -39,11 +39,8 @@ switch (ProjectName) {
     break
 }
 module.exports = {
-  domainIp,
-  FrontIp,
-  Title,
-  Name,
+  domainIp, FrontIp,
+  Title, Name,
   ProjectName,
-  status,
-  link_file
+  status, link_file
 }
